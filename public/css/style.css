@@ -30,3 +30,11 @@ body {
   width: 90% !important ;
   height: 90% !important ;
 }
+
+footer.page-footer {
+  background-color: #88C542 !important;
+}
+
+nav.nav-wrapper{
+  background-color: #88C542 !important;
+}

@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', 'Controller@index');
+Route::get('/', 'Controller@logueo');
 Route::get('/login', 'Controller@logueo');
 Route::get('/createuser','Controller@createuser');
 Route::get('/almacen','Controller@almacen');
 Route::get('/ventas','Controller@ventas');
+Route::get('/reportes','Controller@reportes');
+

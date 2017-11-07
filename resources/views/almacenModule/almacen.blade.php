@@ -2,13 +2,12 @@
 @section('title','Inventario.')
 @section('content')
 <div class="section">
-	<left>
-	<div class="container">
-	<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; ; border: 10px solid #EEE;">
 	<div class = "row">
-         <form class = "col s12">
+   <div class="col s6">
+    <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; ; border: 10px solid #EEE;">
+       <form class = "col s12">
          <center>
-         	<h5>Agregar un nuevo producto.</h5>
+            <h5>Agregar un nuevo producto.</h5>
          </center>
          
             <div class = "row">
@@ -90,19 +89,21 @@
                <a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Lista de proveedores registrados.
                   <i class = "mdi-navigation-arrow-drop-down right"></i></a>
                      </div>           
-                  </form>       
-            
-            
-            </center>
-            </div>
-            
-               
-            </div>
-	</div>
-	</left>
-   <center>
-      <div class="row">
-        <div class="col s12 m6">
+         </form>
+    </div>
+      
+   </div>
+
+   <div class="col s6">
+
+   <form class="navbar-form" role="search">
+      <div class="input-group">
+             
+      <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term">
+      
+      </div>
+   </form>
+      <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Producto X</span>
@@ -114,6 +115,126 @@
             </div>
           </div>
         </div>
+
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>    
+
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        
+
+
+       <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>    
+
+
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Producto X</span>
+              <p>Descripcion del producto.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Editar</a>
+              <a href="#">Eliminar</a>
+            </div>
+          </div>
+        </div>
+   </div>
+                
+            
+            
+            </center>
+            </div>
+            
+               
+            </div>
+	</div>
+   <center>
+      <div class="row">
+        
       </div>
    </center> 
 	</div>

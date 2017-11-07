@@ -33,5 +33,10 @@ class Controller extends BaseController
     {
     	return view('ventasModule/ventas');
     }
+
+    public function reportes()
+    {
+    	return view('reportesModule/reportes');
+    }
 }
 

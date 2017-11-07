@@ -8,6 +8,7 @@
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 	
 	<script src="{{ asset('/js/venta.js') }}"></script>
+	<script src="{{ asset('/js/reportes.js') }}"></script>
 	
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
