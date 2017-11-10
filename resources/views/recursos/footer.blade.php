@@ -24,7 +24,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2017 Todos los derechos reservados
+            © 2017 Todos los derechos reservados.
             </div>
           </div>
 </footer>

@@ -1,15 +1,20 @@
-  $('.datepicker').pickadate({
-  min: new Date(),
-  selectMonths: true, // Creates a dropdown to control month
-  selectYears: 15, // Creates a dropdown of 15 years to control year
-  firstDay: 1
-});	
+$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    }
+  );
 
-var picker = $('#beginDate').pickadate('picker');
-picker.set('select', new Date());
-var picker = $('#endDate').pickadate('picker');
-picker.set('select', new Date());
 
-
- $('select').material_select();
-
+document.addEventListener("DOMContentLoaded", function(){
+  $('.preloader-background').delay(1700).fadeOut('slow');
+  
+  $('.preloader-wrapper')
+    .delay(1700)
+    .fadeOut();
+});

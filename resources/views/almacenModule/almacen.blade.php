@@ -1,7 +1,7 @@
 @extends('master')
 @section('title','Inventario.')
 @section('content')
-<div class="section">
+<div class="section " ng-app="filter" ng-controller="filtro">
 	<div class = "row">
    <div class="col s6">
     <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; ; border: 10px solid #EEE;">
@@ -99,133 +99,42 @@
    <form class="navbar-form" role="search">
       <div class="input-group">
              
-      <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term">
+      <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term" ng-model="termino">
       
       </div>
    </form>
-      <div class="col s12 m6">
+      <div class="col s12 m6 "  ng-repeat="items in productos | filter:termino | orderBy : 'nombre'" >
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
+            <center>
+              <span class="card-title" id="producto">@{{items.nombre}}</span>
+            </center>
+              <p>@{{items.id}}</p>
+              <p>@{{items.descripcion}}</p>
+              <p>@{{items.precio | currency}}</p>
             </div>
             <div class="card-action">
               <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="destruir()">Eliminar</a>
+
+
+              <div id="modal1" class="modal">
+                  <div class="modal-content">
+                  <center>
+                    <h4 id="destroy"></h4>   
+                  </center>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Confirmar</a>
+                </div>
+              </div>
+
+
+
+
             </div>
           </div>
         </div>
 
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-        
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>    
-
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-        
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-        
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-        
-
-
-       <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-        
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>    
-
-
-      <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Producto X</span>
-              <p>Descripcion del producto.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a href="#">Eliminar</a>
-            </div>
-          </div>
-        </div>
-   </div>
-                
-            
-            
             </center>
             </div>
             

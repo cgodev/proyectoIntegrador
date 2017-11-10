@@ -3,151 +3,34 @@
 @section('content')
 <div class="section">
 	<center>
-	<div class="container">
+	<div class="container" ng-app="filter"  ng-controller="filtro">
 	<div class = "row">
 		<div class="col-sm-3 col-md-3 pull-right">
 		    <form class="navbar-form" role="search">
 		        <div class="input-group">
 		        	
-		            <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term">
-		 			<button class="btn btn-default" type="submit">
-		                    <span>Filtrar</span>
-		            </button>
+		            <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term" ng-model="termino">
 		        </div>
 		    </form>
 		</div>
 	</div>
 	<div class="row">
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
+      <div class="col s12 m6" ng-repeat="items in productos | filter:termino  | orderBy : 'nombre'">
+      	<div class="card blue-grey darken-1" >
             <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+            <center>
+            	<span class="card-title">@{{items.nombre}}</span>
+            </center>
+              <p>@{{items.id}}</p>
+              <p>@{{items.descripcion}}</p>
+              <p>$ @{{items.precio}}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+              <a href="#">Agregar al carro</a>
             </div>
          </div>
       </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
-      <div class="col s12 m6">
-      	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Datos triviales</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-         </div>
-      </div>
+      
       
     </div>
 	</div>
@@ -159,7 +42,7 @@
 <div class="container">
 	 <!-- Modal Trigger -->
   <center>
-  	<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Concretar venta.</a>	
+  	<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Facturar venta.</a>	
   </center>
   
 
