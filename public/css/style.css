@@ -30,3 +30,25 @@ body {
   width: 90% !important ;
   height: 90% !important ;
 }
+
+footer.page-footer {
+  background-color: #88C542 !important;
+}
+
+nav.nav-wrapper{
+  background-color: #88C542 !important;
+}
+
+.preloader-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+}
