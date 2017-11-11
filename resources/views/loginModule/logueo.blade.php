@@ -5,7 +5,7 @@
   <div class="section"></div>
   <main>
     <center>
-      <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
+      <img class="responsive-img" style="width: 150px;" src="images/logo.gif" />
       <div class="section"></div>
 
       <h5 class="indigo-text">Ingrese sus credenciales para acceder al aplicativo.</h5>
@@ -41,6 +41,7 @@
             <center>
               <div class='row'>
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
               </div>
             </center>
           </form>

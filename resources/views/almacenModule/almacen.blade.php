@@ -34,14 +34,14 @@
 
 
                <div class = "input-field col s6">
-               <i class="material-icons prefix" >sort-numeric</i>      
+               <i class="material-icons prefix" >attach_money</i>      
                   <label for = "compra">Precio de compra.</label>
                   <input id = "compra" type = "text" placeholder = "Precio."
                      class = "validate" required />          
                </div>
 
                <div class = "input-field col s6">
-               <i class="material-icons prefix" >sort-numeric</i>      
+               <i class="material-icons prefix" >attach_money</i>      
                   <label for = "venta">Precio de venta.</label>
                   <input id = "venta" type = "text" placeholder = "precio."
                      class = "validate" required />          
@@ -72,22 +72,27 @@
             
                <div class = "input-field col s6">
                   <i class = "material-icons prefix">mode_edit</i>
-                  <input id = "id" class = "validate"></input>
-                  <label for = "id">Nit o cedula.</label>
+                  <input placeholder = "Nit o cedula" id = "idProv" type = "text"
+                     class = "validate">
+                  <label for = "idProv">Nit o cedula</label>
                </div>
 
               
-               <ul id = "dropdown" class = "dropdown-content">
-               <center>
+
+               <a class='dropdown-button btn' href='#' data-activates='dropdown1'>PROVEEDORES EXISTENTES</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <center>
                   <li><span class="badge">Ricardo Montolivo</span></li>
                   <li><span class="badge">Ricardo Quaresma</span></li>
                   <li><span class="badge">Cristiano Ronaldo</span></li>
                   <li><span class="badge">Lionel Messi</span></li>
-               </center>
-               </ul>
-               
-               <a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Lista de proveedores registrados.
-                  <i class = "mdi-navigation-arrow-drop-down right"></i></a>
+                </center>
+              </ul>
+
+
+
                      </div>           
          </form>
     </div>
@@ -103,7 +108,7 @@
       
       </div>
    </form>
-      <div class="col s12 m6 "  ng-repeat="items in productos | filter:termino | orderBy : 'nombre'" >
+      <div class="col s12 m6 "  ng-repeat="items in productos | filter:termino" >
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
             <center>
@@ -121,10 +126,13 @@
               <div id="modal1" class="modal">
                   <div class="modal-content">
                   <center>
-                    <h4 id="destroy"></h4>   
+                    <h4 id="destroy">¿ESTA SEGURO QUE DESEA ELIMINAR?</h4>   
                   </center>
                 <div class="modal-footer">
-                  <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Confirmar</a>
+                  <center>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Confirmar</a>  
+                  </center>
+                  
                 </div>
               </div>
 

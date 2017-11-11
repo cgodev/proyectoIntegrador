@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<div class="row">
-      <div class="col s12 m6" ng-repeat="items in productos | filter:termino  | orderBy : 'nombre'">
+      <div class="col s12 m6" ng-repeat="items in productos | filter:termino ">
       	<div class="card blue-grey darken-1" >
             <div class="card-content white-text">
             <center>
@@ -23,10 +23,10 @@
             </center>
               <p>@{{items.id}}</p>
               <p>@{{items.descripcion}}</p>
-              <p>$ @{{items.precio}}</p>
+              <p>@{{items.precio | currency}}</p>
             </div>
             <div class="card-action">
-              <a href="#">Agregar al carro</a>
+              <a class="modal-action modal-close waves-effect waves-blue btn-flat" onclick="alert('Producto agregado al carro.')">Agregar al carro</a>
             </div>
          </div>
       </div>
@@ -82,11 +82,20 @@
 	        <input id="tipoPago" type="text" class="materialize-textarea validate"></input>
 	        <label for="tipoPago">Tipo de Pago.</label>
 	    </div>
+
+	    <div class="input-field col s6">
+          <input id="ValorPago" type="text" class="materialize-textarea validate"></input>
+          <label for="ValorPago">Valor.</label>
+      	</div>
+
+	    </div>
+          
       </div>
+      <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar la venta</a>
+	    </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar la venta</a>
-    </div>
+    
   </div>
 </div>
 		

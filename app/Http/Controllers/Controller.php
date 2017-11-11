@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
     public function index()
     {
-        return view('welcome');
+        return view('loginModule/logueo');
     }
 
     public function logueo()
@@ -37,6 +37,11 @@ class Controller extends BaseController
     public function reportes()
     {
     	return view('reportesModule/reportes');
+    }
+
+    public function ingresar()
+    {
+    	return redirect('/almacen');
     }
 }
 

@@ -3,11 +3,12 @@
 @section('content')
 <div class="section">
 <center>
+<img class="responsive-img" style="width: 150px;" src="images/logo.gif" />
 <div class="container">
 <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; ; border: 1px solid #EEE;">
 
 	<div id="register" class="col s12">
-		<form class="col s12">
+		<form class="col s12" method="post">
 			<div class="form-container">
 				<h3 class="teal-text" >Creacion de Usuario</h3>
 				<div class="row">
@@ -41,6 +42,12 @@
 				<center>
 					<button class="btn waves-effect waves-light teal" type="submit" name="action">Registrar.</button>
 				</center>
+				<div>
+					
+
+
+
+				</div>
 			</div>
 		</form>
 	</div>

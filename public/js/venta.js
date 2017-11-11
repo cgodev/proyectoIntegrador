@@ -9,4 +9,3 @@ function destruir()
 	console.log('destroy');
  	document.getElementById('destroy').innerHTML= "¿Esta seguro que desea eliminar" + destroy +"?";	
 }
- 

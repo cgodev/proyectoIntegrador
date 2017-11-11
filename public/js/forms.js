@@ -1,20 +1,27 @@
 $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrainWidth: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: false, // Displays dropdown below the button
-      alignment: 'left', // Displays dropdown with edge aligned to the left of button
-      stopPropagation: false // Stops event propagation
-    }
-  );
+           inDuration: 300,
+           outDuration: 225,
+           constrain_width: true, 
+           hover: false, 
+           gutter: 0, 
+           belowOrigin: false 
+           }
+);
+
+window.onload = function(){
+  var contenedor = document.getElementById('carga');
+  contenedor.style.visibility = 'hidden';
+  contenedor.style.opacity = '0';
+}
+
+function addCar(){
+  alert("Producto agregado al carro.");
+}
 
 
-document.addEventListener("DOMContentLoaded", function(){
-  $('.preloader-background').delay(1700).fadeOut('slow');
-  
-  $('.preloader-wrapper')
-    .delay(1700)
-    .fadeOut();
+$(document).ready(function(){
+  function addCar(){
+  alert("Producto agregado al carro.");
+  }
+
 });
