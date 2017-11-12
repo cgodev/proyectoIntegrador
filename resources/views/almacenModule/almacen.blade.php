@@ -1,7 +1,7 @@
 @extends('master')
 @section('title','Inventario.')
 @section('content')
-<div class="section " ng-app="filter" ng-controller="filtro">
+<div class="section " >
 	<div class = "row">
    <div class="col s6">
     <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; ; border: 10px solid #EEE;">
@@ -77,84 +77,100 @@
                   <label for = "idProv">Nit o cedula</label>
                </div>
 
+              <div >
+                <a class='dropdown-button btn' href="#" data-beloworigin="false" data-activates='dropdown1'>PROVEEDORES EXISTENTES</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                  <center>
+                    <li><a href="#"><span class="badge">Ricardo Montolivo</span></a></li>
+                    <li><a href="#"><span class="badge">Ricardo Quaresma</span></a></li>
+                    <li><a href="#"><span class="badge">Cristiano Ronaldo</span></a></li>
+                    <li><a href="#"><span class="badge">Lionel Messi</span></a></li>
+                  </center>
+                </ul>
+              </div>
+
+            </div>
+            <center>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+                <i class="material-icons right">send</i>
+              </button>             
+            </center>
               
-
-               <a class='dropdown-button btn' href='#' data-activates='dropdown1'>PROVEEDORES EXISTENTES</a>
-
-              <!-- Dropdown Structure -->
-              <ul id='dropdown1' class='dropdown-content'>
-                <center>
-                  <li><span class="badge">Ricardo Montolivo</span></li>
-                  <li><span class="badge">Ricardo Quaresma</span></li>
-                  <li><span class="badge">Cristiano Ronaldo</span></li>
-                  <li><span class="badge">Lionel Messi</span></li>
-                </center>
-              </ul>
-
-
-
-                     </div>           
          </form>
     </div>
       
    </div>
 
-   <div class="col s6">
+    
 
-   <form class="navbar-form" role="search">
-      <div class="input-group">
-             
-      <input type="text" class="form-control" placeholder="Busqueda por nombre o id del producto." name="srch-term" id="srch-term" ng-model="termino">
-      
-      </div>
-   </form>
-      <div class="col s12 m6 "  ng-repeat="items in productos | filter:termino" >
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-            <center>
-              <span class="card-title" id="producto">@{{items.nombre}}</span>
             </center>
-              <p>@{{items.id}}</p>
-              <p>@{{items.descripcion}}</p>
-              <p>@{{items.precio | currency}}</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Editar</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="destruir()">Eliminar</a>
+	</div>
+	</div>
+  <div class="section">
+  <center>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1" onclick="destruir()">CONSULTAR PRODUCTOS DE ALMACEN</a>
 
 
-              <div id="modal1" class="modal">
-                  <div class="modal-content">
-                  <center>
-                    <h4 id="destroy">¿ESTA SEGURO QUE DESEA ELIMINAR?</h4>   
-                  </center>
+
+  <div class="col s6"  ng-app="filter" ng-controller="filtro">
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+          
+       <form class="navbar-form" role="search">
+       <div class="input-group">
+       <input type="text" class="form-control" placeholder="Busqueda de productos." ng-model="termino">
+       </div>
+       </form>
+          <div class="col s12 m6"  >
+            <form>
+                    <div class="col s12 m6">
+                      <div class="card blue-grey darken-1" ng-repeat="items in productos | filter:termino" >
+                      <div class="card-content white-text">
+                        <center>
+                          <span class="card-title" id="producto">@{{items.nombre}}</span>
+                        </center>
+                        <p>@{{items.id}}</p>
+                        <p>@{{items.descripcion}}</p>
+                        <p>@{{items.precio | currency}}</p>
+                      </div>
+                    <div class="card-action">
+                        <a href="#">Editar</a>
+                        <a class="waves-effect waves-light btn modal-trigger" href="#modal2")">Eliminar</a>
+
+
+                        <div id="modal2" class="modal">
+                            <div class="modal-content">
+                              <center>
+                                <h4 id="destroy">¿ESTA SEGURO QUE DESEA ELIMINAR?</h4>
+                              </center>
+                              <div class="modal-footer">
+                                <center>
+                                  <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Confirmar</a>  
+                                </center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+
                 <div class="modal-footer">
                   <center>
-                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Confirmar</a>  
+                    <a href="" class="modal-action modal-close waves-effect waves-red btn-flat">Volver</a>  
                   </center>
-                  
                 </div>
               </div>
-
-
-
-
-            </div>
-          </div>
-        </div>
-
-            </center>
-            </div>
-            
-               
-            </div>
-	</div>
-   <center>
-      <div class="row">
-        
+              
+            </form>
+              
       </div>
-   </center> 
-	</div>
+    </div>
+  </div>
+  </center>
+    
+  
 </div>
 
 

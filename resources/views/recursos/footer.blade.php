@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   </head>
-<footer class="page-footer green accent-4">
+<footer class="page-footer light-green darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
