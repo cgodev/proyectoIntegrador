@@ -33,7 +33,7 @@
                 <label for='password'>Ingrese su contraseña.</label>
               </div>
               <label style='float: right;'>
-                <a class='pink-text' href='#!'><b>¿Olvidaste tu contraseña?</b></a>
+                <a class='pink-text' onclick="Materialize.toast('Comunicate con el departamento de sistemas para resolverlo', 4000)"><b>¿Olvidaste tu contraseña?</b></a>
               </label>
             </div>
 

@@ -24,7 +24,7 @@
   </head>
   <body>
     <nav>
-    <div class="nav-wrapper green accent-4">
+    <div class="nav-wrapper light-green darken-4">
       <a href="#!" class="brand-logo">PETROLEOS S.S.</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">

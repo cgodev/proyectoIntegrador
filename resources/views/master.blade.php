@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>@yield ('title') </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script> 
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	
+	<title>@yield ('title') </title>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
 
 	
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 	<script src="{{ asset('/angular/filtro.js') }}"></script>
 	<script src="{{ asset('/js/forms.js') }}"></script>
 	<script src="{{ asset('/js/venta.js') }}"></script>
 	<script src="{{ asset('/js/reportes.js') }}"></script>
-	
-	
-
-	
-	
-	
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -37,7 +38,7 @@
 	 	 });
 	</script>
 </head>
-<body>
+<body ng-app="filter"  ng-controller="filtro">
 
 	<div class="preloader-background" id="carga">
 	<div class="preloader-wrapper big active">
@@ -55,7 +56,6 @@
 
 	</div>
 	</div>
-	@include('recursos.navbar')
 	@yield('content')
 	@include('recursos.footer')
 </body>
