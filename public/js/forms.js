@@ -14,4 +14,7 @@ window.onload = function(){
   contenedor.style.opacity = '0';
 }
 
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
 

@@ -1,7 +1,7 @@
 @extends('loginModule/masterLogin')
 @section('title','Login')
 @section('content')
-<body>
+<body ng-app="router" >
   <div class="section"></div>
   <main>
     <center>
@@ -40,7 +40,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+                <button href="#!requestLogin" type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
               </div>
             </center>

@@ -79,7 +79,11 @@
 </div>		
 
 
+<<<<<<< HEAD
 <!-- Modal Structure -->
+=======
+  <!-- Modal Structure -->
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 <div id="modalFacturar" class="modal">
     <div class="modal-content">
     	<center>
@@ -96,7 +100,11 @@
     	</div>
 
 
+<<<<<<< HEAD
     <div class="row" ng-app="filter" ng-controller="filtro">
+=======
+    <div class="row">
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
       	<div class="input-field col s6">
 	    	<input id="idCliente" type="text" class="validate">
 	        <label for="idCliente">Cedula del cliente.</label>
@@ -119,11 +127,14 @@
 		</div>
 
 		<div class="input-field col s6">
+<<<<<<< HEAD
 			<input id="direccion" type="text" class="materialize-textarea validate"></input>
 			<label for="direccion">direccion.</label>
 		</div>
 
 		<div class="input-field col s6">
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 			<input id="tipoPago" type="text" class="materialize-textarea validate"></input>
 			<label for="tipoPago">Tipo de Pago.</label>
 		</div>
@@ -131,16 +142,23 @@
 		<div class="input-field col s6">
 			<input id="ValorPago" type="text" class="materialize-textarea validate"></input>
 			<label for="ValorPago">Valor.</label>
+<<<<<<< HEAD
 		</div>
 
 		<div class="input-field col s6">
 			<input id="userId" type="text" class="materialize-textarea validate"></input>
 			<label for="userId">usuario</label>
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 		</div>
 	</div>
 	</div>
 		<div class="modal-footer">
+<<<<<<< HEAD
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="publicCliente()">Registrar la venta</a>
+=======
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar la venta</a>
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 		</div>
 </div>
 

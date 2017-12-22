@@ -125,10 +125,14 @@
 	</div>
 
 <div class="divider"></div>
+<<<<<<< HEAD
 <div class="section">
+=======
+<div class="section" ng-app="filter" ng-controller="filtro">
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
   <center>
-    <a class="waves-effect waves-light btn modal-trigger" href="#modalProductos" >Bodega de Productos.</a>
-    <a class="waves-effect waves-light btn modal-trigger" href="#modalProveedores" >Proveedores.</a>  
+    <a class="waves-effect waves-light btn modal-trigger" href="#modalProductos" onclick="Materialize.toast('¡SOLO MODIFIQUE LOS CAMPOS DESEADOS, LOS DEMAS DEBEN PERMANECER IGUAL!',4000)">Bodega de Productos.</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modalProveedores" onclick="Materialize.toast('¡SOLO MODIFIQUE LOS CAMPOS DESEADOS, LOS DEMAS DEBEN PERMANECER IGUAL!',4000)">Proveedores.</a>  
   </center>
 </div>
 <!-- Se declaran todos los modales -->
@@ -145,8 +149,12 @@
       <div class="card blue-grey darken-1" ng-repeat="items in productos | filter:termino" >
         <div class="card-content white-text">
           <center>
-            <span class="card-title" id="producto">@{{items.nombre}}</span>
+            <i class = "material-icons prefix">local_drink</i>
+            <input placeholder = "Nombre producto." id = "nombre2"
+            type = "text" class = "validate" required value="@{{items.nombre}}"/>
+            <label for = "nombre2">Nombre producto.</label>
           </center>
+<<<<<<< HEAD
           <p>@{{items.codigo}}</p>
           <p>@{{items.descripcion}}</p>
           <p>@{{items.precio | currency}}</p>
@@ -168,6 +176,42 @@
                   </div>
                 </div>
               </div>
+=======
+          <!-- Se declaran los atributos de los productos productos -->
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "codigo2"
+          type = "text" class = "validate" required value="@{{items.codigo}}"/>
+          <label for = "codigo2">Codigo producto.</label>
+
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "descripcion2"
+          type = "text" class = "validate" required value="@{{items.descripcion}}"/>
+          <label for = "descripcion2">Nombre producto.</label>
+
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "venta2"
+          type = "number" class = "validate" required value="@{{items.precio | currency}}"/>
+          <label for = "venta2">Precio de venta.</label>
+
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "compra2"
+          type = "number" class = "validate" required value="@{{items.costoCompra | currency}}"/>
+          <label for = "compra2">Costo de compra.</label>
+
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "cantidad2"
+          type = "number" class = "validate" required value="@{{items.cantidad}}"/>
+          <label for = "cantidad">Cantidad disponible.</label>
+
+          <i class = "material-icons prefix">local_drink</i>
+          <input placeholder = "Nombre producto." id = "idProv2"
+          type = "text" class = "validate" required value="@{{items.nitProveedor}}"/>
+          <label for = "idProv2">Dato proveedor.</label>
+        </div>
+        <div class="card-action">
+          <a href="#" class="modal-action modal-close waves-effect waves-yellow btn" ng-click="editProduct()">Editar</a>
+          <a href="#" class="modal-action modal-close waves-effect waves-yellow btn" ng-click="confirmDeleteProd()">Eliminar</a>
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
         </div>
       </div>
     </div>            
@@ -177,20 +221,23 @@
 </div>
 
 <!-- Modal Structure -->
-  <div id="modalProveedores" class="modal modal-fixed-footer">
+  <div id="modalProveedores" class="modal modal-fixed-footer" ng-app = "filter" ng-controller="filtro">
     <div class="modal-content">
       <center>
         <h3>Proveedores.</h3>
         <h4>Se presenta la lista de proveedores existentes.</h4>
       </center>
       
-      <ul class="collapsible" data-collapsible="accordion">
+      <ul class="collapsible" data-collapsible="accordion" ng-repeat = 'items in proveedores'>
         <li>
           <div class="collapsible-header">
             <i class="material-icons">filter_drama</i>
-            First
-            <span class="new badge">4</span></div>
-          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            @{{items.nombre}}
+            <span class="new badge">@{{items.nit}}</span></div>
+          <div class="collapsible-body">
+            <p>@{{items.direccion}}</p>
+            <p>@{{items.telefono}}</p>
+          </div>
         </li>
       </ul>
     </div>

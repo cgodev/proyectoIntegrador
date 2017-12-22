@@ -14,16 +14,24 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular-route.js"></script>
+	
 
 	
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+	<script src="{{ asset('/angular/producto.js') }}"></script>
+	<script src="{{ asset('/angular/proveedores.js') }}"></script>
 	<script src="{{ asset('/angular/filtro.js') }}"></script>
 	<script src="{{ asset('/js/forms.js') }}"></script>
 	<script src="{{ asset('/js/venta.js') }}"></script>
 	<script src="{{ asset('/js/reportes.js') }}"></script>
 	<script src="{{ asset('/js/almacen/interactive.js') }}"></script>
+<<<<<<< HEAD
 	<script src="{{ asset('/angular/ventas.js') }}"></script>
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 

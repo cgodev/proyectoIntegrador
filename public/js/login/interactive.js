@@ -8,6 +8,4 @@ $(document).ready(function(){
 	    endingTop: '10%', // Ending top style attribute
 	});
 	$('select').material_select();
-
-
 });

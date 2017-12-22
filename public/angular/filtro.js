@@ -2,8 +2,11 @@
 var app = angular.module('filter',[]).controller('filtro',function($http,$scope){
 	$scope.carrito = [];
 	$scope.productos;
+<<<<<<< HEAD
 	$scope.clientes = [];
 	$scope.ventas = [];
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 
 	//Consumiendo la apiRest de productos
 	$http({
@@ -16,6 +19,7 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
         console.log("Error",response);
     }); 
 
+<<<<<<< HEAD
     //Consumiendo Todos los clientes
     $http({
         method: 'GET',
@@ -123,10 +127,13 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
 
 
 
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
     //Consumiendo la apiRest de proveedores y productos al tiempo
     $scope.publicProduct = function(){
     	//Preparando y añadiendo el producto.
     	$scope.proveedores = [];
+<<<<<<< HEAD
     	var producto = {
     		"codigo" : document.getElementById("codigo").value,
     		"nombre": document.getElementById("nombre").value,
@@ -136,11 +143,14 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
     		"descripcion": document.getElementById("descripcion").value,
     		"nitProveedor": document.getElementById("idProv").value	
     	};
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 
     	$http.get('http://localhost/apiRestProveedores/public/api/proveedores').then(function(respuesta){
     		$scope.proveedores = respuesta.data;
     	})
 
+<<<<<<< HEAD
 
 	    var provs = $scope.proveedores;
 	    var validate = true;
@@ -157,6 +167,9 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
 	   	if(validate)
 	   	{
 	   		console.log("is true");
+=======
+	   	//validamos si el proveedor existe o no para hacer la transaccion respectiva.
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 	   		var proveedor = {
 	   			nit: document.getElementById("idProv").value,
 	   			nombre: document.getElementById("nombreProv").value,
@@ -187,6 +200,7 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
 	   			promesa();
 	   		})	   		
 
+<<<<<<< HEAD
 	   		//publica el producto y el proveedor
 	   	}
 	   	else{
@@ -210,6 +224,10 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
 
 	   	}     	
     }
+=======
+	   	}     	
+    
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 
 
 	$scope.addToCar = function(item){
@@ -223,6 +241,7 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
 		}
 	  	Materialize.toast('Producto agregado al carro.', 4000);//Notificacion del carro.
 	}
+<<<<<<< HEAD
 
 
 	var promesa = function(){
@@ -286,5 +305,110 @@ var app = angular.module('filter',[]).controller('filtro',function($http,$scope)
             Materialize.toast($toastContent, 10000);
         } 
 });
+=======
+>>>>>>> 17b38c42744968e52c570008d4114b63fb364374
 
 
+	var promesa = function(){
+		//Consumiendo la apiRest de productos
+		$http({
+	        method: 'GET',
+	        url: 'http://localhost/apiRestAlmacen/public/api/productos'
+	    }).then(function successCallback(response) {
+	        $scope.productos = response.data;
+	        console.log($scope.productos);
+	    }, function errorCallback(response) {
+	        console.log("Error",response);
+	    }); 
+
+	}
+
+
+
+	$scope.editProduct = function(){
+		var producto = {
+	   		codigo:document.getElementById("codigo2").value,
+			nitProveedor: document.getElementById("idProv2").value,
+			nombre: document.getElementById("nombre2").value,
+			descripcion : document.getElementById("descripcion2").value,
+			cantidad: parseInt(document.getElementById("cantidad2").value),
+			precio: parseFloat(document.getElementById("venta2").value),
+			costoCompra: parseFloat(document.getElementById("compra2").value) 
+	   	}
+
+	   	$http.put('http://localhost/apiRestAlmacen/public/api/productos/actualizar/' + producto.codigo ,producto).then(function(response){
+	   		Materialize.toast('Producto modificado correctamente.', 4000);
+	   	},function errorCallback(response){
+	   		Materialize.toast('Ha ocurrido un error: ' + response.status, 4000);
+	   	})
+	};
+
+
+	$scope.deleteProducto = function(){
+
+
+        $http.delete('http://localhost/apiRestAlmacen/public/api/productos/destroy/'+producto.id , prodcuto).then(function(response){
+            Materialize.toast('Producto eliminado satisfactoriamente.', 3000);
+        },function errorCallback(response){
+            Materialize.toast('Ha ocurrido un error: ' + response.status, 3000);
+        })
+    };
+
+    $scope.confirmDeleteProd = function(){
+        var $toastContent = $('<span>¿Esta seguro de eliminar el producto?</span>').add($('<button class="btn-flat toast-action ng-click="deleteProducto()">Acepto</button>'));
+        Materialize.toast($toastContent, 10000);
+    };
+
+
+
+    //Transacciones para los proveedores
+    $scope.proveedores = [];
+
+	$http({
+        method: 'GET',
+        url: 'http://localhost/apiRestProveedores/public/api/proveedores'
+    }).then(function successCallback(response) {
+        $scope.proveedores = response.data;
+        console.log($scope.proveedores);
+    }, function errorCallback(response) {
+        console.log("Error",response);
+    }); 
+
+
+    $scope.editProveedor = function(){
+        var proveedor = {
+            nit: document.getElementById("idProv").value,
+            nombre: document.getElementById("nombreProv").value,
+            direccion: document.getElementById("dirProv").value,
+            telefono: document.getElementById("telProv").value,
+        }
+
+        $http.put('http://localhost/apiRestProveedores/public/api/proveedor/actualizar/' + proveedor.nit ,proveedor).then(function(response){
+            Materialize.toast('Proveedor modificado correctamente.', 4000);
+        },function errorCallback(response){
+            Materialize.toast('Ha ocurrido un error: ' + response.status, 4000);
+        })
+    }
+
+
+    $scope.deleteProveedor = function(){
+
+        var proveedor = {
+            nit: document.getElementById("idProv").value,
+            nombre: document.getElementById("nombreProv").value,
+            direccion: document.getElementById("dirProv").value,
+            telefono: document.getElementById("telProv").value,
+        }
+
+        $http.delete('http://localhost/apiRestAlmacen/public/api/productos/destroy/'+proveedor.nit , proveedor).then(function(response){
+            Materialize.toast('Proveedor eliminado satisfactoriamente.', 3000);
+        },function errorCallback(response){
+            Materialize.toast('Ha ocurrido un error: ' + response.status, 3000);
+        })
+    }
+
+    $scope.confirmDeleteProv = function(){
+        var $toastContent = $('<span>¿Esta seguro de eliminar el proveedor?</span>').add($('<button class="btn-flat toast-action ng-click="deleteProducto()">Acepto</button>'));
+        Materialize.toast($toastContent, 10000);
+    }
+});
