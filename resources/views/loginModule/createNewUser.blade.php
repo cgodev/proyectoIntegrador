@@ -2,6 +2,9 @@
 @section('title','Crear un usuario.')
 @section('content')
 <div class="section">
+<script type="text/javascript">
+	Materialize.toast('ESTAS EN MODO SUPER USUARIO: ADMINISTRA BIEN LAS CREDENCIALES DE TUS USUARIOS!', 6000);
+</script>
 <center>
 <img class="responsive-img" style="width: 150px;" src="images/logo.gif" />
 <div class="container">

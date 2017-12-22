@@ -22,6 +22,8 @@
 	<script src="{{ asset('/js/forms.js') }}"></script>
 	<script src="{{ asset('/js/venta.js') }}"></script>
 	<script src="{{ asset('/js/reportes.js') }}"></script>
+	<script src="{{ asset('/js/almacen/interactive.js') }}"></script>
+	<script src="{{ asset('/angular/ventas.js') }}"></script>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
