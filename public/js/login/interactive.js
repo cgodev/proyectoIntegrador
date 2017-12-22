@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	Materialize.toast('ESTAS EN MODO SUPER USUARIO: ADMINISTRA BIEN LAS CREDENCIALES DE TUS USUARIOS!', 6000)
 	$('.modal').modal({
 	     dismissible: true, // Modal can be dismissed by clicking outside of the modal
 	    opacity: .10, // Opacity of modal background
@@ -9,6 +8,4 @@ $(document).ready(function(){
 	    endingTop: '10%', // Ending top style attribute
 	});
 	$('select').material_select();
-
-
 });

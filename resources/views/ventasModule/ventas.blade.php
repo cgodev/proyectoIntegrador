@@ -12,20 +12,28 @@
 			    <a href="#!" class="collection-item">Alan</a>
 			    <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
 			</div>
-			<a class="waves-effect waves-light btn modal-trigger" href="#modalClientes">Clientes.</a>
-  			<a class="waves-effect waves-light btn modal-trigger" href="#modalVentas">Ventas.</a>	
+			<a class="waves-effect waves-yellow btn modal-trigger" href="#modalClientes">Clientes.</a>
+  			<a class="waves-effect waves-blue btn modal-trigger" href="#modalVentas">Ventas.</a>	
 		</div>
 		<div class="col s12 m4 l5" >
-			<h3>Tu Carro de compras</h3>
-			<p>A continuacion un listado de lo que has comprado hasta ahora:</p>
+			<center>
+				<h3>Tu Carro de compras</h3>
+				<p>A continuacion un listado de lo que has comprado hasta ahora:</p>	
+			</center>
+			
 			<div class="collection" ng-repeat="items in carrito">
 			  <a class="collection-item"><span class="badge">@{{items.id}}</span>@{{items.nombre}}</a>
 			</div>
-  			<a class="waves-effect waves-light btn modal-trigger" href="#modalProductos">Consultar productos.</a>
-  			<a class="waves-effect waves-light btn modal-trigger" href="#modalFacturar">Facturar venta</a>
+			<center>
+				<a class="waves-effect waves-light btn modal-trigger" href="#modalProductos">Consultar productos.</a>
+  				<a class="waves-effect waves-light btn modal-trigger" href="#modalFacturar">Facturar venta</a>
+			</center>
 		</div>
 	</div>
 </div>
+
+<!-- Declaracion de modales -->
+
 
 <div id="modalProductos" class="modal" >
   	<div class="modal-content">
@@ -70,51 +78,60 @@
 	</div>
 </div>		
 
+
+  <!-- Modal Structure -->
 <div id="modalFacturar" class="modal">
-	<div class="modal-content">
-		<center>
-			<h4>Datos para la facturación.</h4>		
-		</center>
-		<div class="row">
-			<div class="input-field col s6">
-				<input id="idCliente" type="text" class="validate">
-				<label for="idCliente">Cedula del cliente.</label>
-			</div>
-					          
-			<div class="input-field col s6">
-				<input id="nombres" type="text" class="validate">
-				<label for="nombres">Nombres</label>
-			</div>
-					          
-			<div class="input-field col s6">
-				<input id="apellidos" type="text" class="materialize-textarea validate"></input>
-				<label for="apellidos">Apellidos</label>
-			</div>
+    <div class="modal-content">
+    	<center>
+    		<h4>Datos para la facturación.</h4>		
+    	</center>
+    	<div class="nav-wrapper">
+      	<form>
+        	<div class="input-field">
+          		<input id="search" type="search" required>
+          		<label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          		<i class="material-icons">close</i>
+        	</div>
+      	</form>
+    	</div>
 
-			<div class="input-field col s6">
-				<input id="direccion" type="text" class="materialize-textarea validate"></input>
-				<label for="direccion">Dirección</label>
-			</div>
 
-			<div class="input-field col s6">
-				<input id="telefono" type="text" class="materialize-textarea validate"></input>
-				<label for="telefono">Telefono</label>
-			</div>
+    <div class="row">
+      	<div class="input-field col s6">
+	    	<input id="idCliente" type="text" class="validate">
+	        <label for="idCliente">Cedula del cliente.</label>
+	    </div>
+	          
+	    <div class="input-field col s6">
+	        <input id="nombres" type="text" class="validate">
+	        <label for="nombres">Nombres</label>
+	    </div>
+	          
+	    <div class="input-field col s6">
+	        <input id="apellidos" type="text" class="materialize-textarea validate"></input>
+	        <label for="apellidos">Apellidos</label>
+	    </div>
 
-			<div class="input-field col s6">
-				<input id="tipoPago" type="text" class="materialize-textarea validate"></input>
-				<label for="tipoPago">Tipo de Pago.</label>
-			</div>
 
-			<div class="input-field col s6">
-				<input id="ValorPago" type="text" class="materialize-textarea validate"></input>
-				<label for="ValorPago">Valor.</label>
-			</div>
+		<div class="input-field col s6">
+			<input id="telefono" type="text" class="materialize-textarea validate"></input>
+			<label for="telefono">Telefono</label>
+		</div>
+
+		<div class="input-field col s6">
+			<input id="tipoPago" type="text" class="materialize-textarea validate"></input>
+			<label for="tipoPago">Tipo de Pago.</label>
+		</div>
+
+		<div class="input-field col s6">
+			<input id="ValorPago" type="text" class="materialize-textarea validate"></input>
+			<label for="ValorPago">Valor.</label>
 		</div>
 	</div>
-	<div class="modal-footer">
-		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar la venta</a>
 	</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Registrar la venta</a>
+		</div>
 </div>
 
 
